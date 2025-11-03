@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Drop from '../Tools/Drop.jsx'
+import { Link } from 'react-router-dom';
 
 export default function ButtonAppBar() {
   return (
@@ -14,8 +15,13 @@ export default function ButtonAppBar() {
 
          
           <Typography  variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Button href='/dash' color='inherit' size='big'>
+            <Button color='inherit' size='big'>
+              <Link to='/' style={{
+                textDecoration: 'none',
+                color: 'inherit'
+              }}>
             D.Q. DIGITALS
+            </Link>
             </Button>
           </Typography>
           
