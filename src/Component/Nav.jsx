@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Stack from '@mui/material/Stack';
+import { Link } from 'react-router-dom';
 
 export default function ButtonAppBar() {
   return (
@@ -22,23 +23,38 @@ export default function ButtonAppBar() {
 
          
           <Typography  variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Button href='/' color='inherit' size='big'>
+            <Button color='inherit' size='big'>
+              <Link to='/' style={{
+                textDecoration: 'none',
+                color: 'inherit'
+              }}>
             D.Q. DIGITALS
+            </Link>
             </Button>
           </Typography>
           
 
           <Stack spacing={2} direction="row" justifyContent="center">
-          <Button href='/login'
+          <Button
           // variant="contained"
           color="success"
           size="big"
-          >LOGIN</Button>
-          <Button href='/register' 
+          > <Link to='/login' style={{
+                textDecoration: 'none',
+                color: 'inherit'
+              }}>
+            LOGIN
+            </Link></Button>
+          <Button
           // variant="contained"
           color="error"
           size="big"
-          >REGISTER</Button>
+          >
+            <Link to='/register' style={{
+                textDecoration: 'none',
+                color: 'inherit'
+              }}>
+            REGISTER </Link> </Button>
           {/* <Button href='/login' color="inherit">Login</Button>
           <Button href='/users' color="inherit">Users</Button> */}
           </Stack>
