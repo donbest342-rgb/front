@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from '@mui/material'
 import './Heros.css'
 import image from '../assets/lobby.avif'
+import { Link } from 'react-router-dom'
 
 const Heros = () => {
   return (
@@ -26,11 +27,18 @@ const Heros = () => {
             and access in-depth equity research.
           </Typography>
           <Button 
-          href='/register'
           variant="contained"
           color='success'
           >
+            <Link to='/register'
+            style={{
+              textDecoration: 'none',
+              color: 'inherit'
+            }}
+            >
             GET STARTED
+            </Link>
+            
           </Button>
         </Box>
     
